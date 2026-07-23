@@ -2,12 +2,11 @@ pipeline {
     agent any
 
     environment {
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
         appVersion = ""
-        PATH = "/opt/homebrew/bin:${env.PATH}"
     }
 
     stages {
-
         stage('Read version') {
             steps {
                 script {
